@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Bank Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles1.css" />
+</head>
+<body style="background-image: radial-gradient(circle at 90% 24%, rgba(209, 209, 209,0.04) 0%, rgba(209, 209, 209,0.04) 50%,rgba(160, 160, 160,0.04) 50%, rgba(160, 160, 160,0.04) 100%),radial-gradient(circle at 91% 63%, rgba(45, 45, 45,0.04) 0%, rgba(45, 45, 45,0.04) 50%,rgba(87, 87, 87,0.04) 50%, rgba(87, 87, 87,0.04) 100%),radial-gradient(circle at 17% 2%, rgba(124, 124, 124,0.04) 0%, rgba(124, 124, 124,0.04) 50%,rgba(117, 117, 117,0.04) 50%, rgba(117, 117, 117,0.04) 100%),linear-gradient(88deg, rgb(33, 20, 105),rgb(1, 15, 13));">
+  <header>
+    <div class="container">
+      <div class="logo"><h1>Blood Bank</h1></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" id="home-link">Home</a></li>
+          <li><a href="#" id="donate-link">Donate</a></li>
+          <li><a href="#" id="request-link">Request</a></li>
+          <li><a href="#" id="inventory-link">Inventory</a></li>
+          <li><a href="#" id="contact-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Give Blood, Save Lives</h2>
+      <p>Your donation can make a difference.</p>
+      <a href="#" id="donate-link-hero" class="btn-primary">Donate Now</a>
+    </div>
+  </section>
+
+  <section id="donate" class="form-section" style="background-image: radial-gradient(circle at bottom right, rgb(52, 33, 141) 0%, rgb(52, 33, 141) 20%,rgb(52, 50, 168) 20%, rgb(52, 50, 168) 40%,rgb(52, 68, 195) 40%, rgb(52, 68, 195) 60%,rgb(52, 85, 221) 60%, rgb(52, 85, 221) 80%,rgb(52, 102, 248) 80%, rgb(52, 102, 248) 100%);">
+    <h2>Donate Blood</h2>
+    <form id="donation-form">
+      <input type="text" id="donor-name" placeholder="Your Name" required><br><br>
+      <input type="email" id="donor-email" placeholder="Your Email" required><br><br>
+      <select id="donor-blood-type" required>
+        <option value="" disabled selected>Choose Blood Type</option>
+        <option value="A+">A+</option>
+        <option value="O-">O-</option>
+        <option value="B+">B+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+      </select><br><br>
+      <textarea id="donation-message" placeholder="Message (Optional)"></textarea><br><br>
+      <button type="submit" class="btn-submit">Submit Donation</button>
+    </form>
+    <div id="donation-message-result"></div>
+  </section>
+
+  <section id="request" class="form-section" style="background-image: linear-gradient(45deg, transparent 0%, transparent 11%,rgba(156, 156, 156,0.06) 11%, rgba(156, 156, 156,0.06) 81%,transparent 81%, transparent 100%),linear-gradient(45deg, transparent 0%, transparent 18%,rgba(156, 156, 156,0.06) 18%, rgba(156, 156, 156,0.06) 64%,transparent 64%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 13%,rgba(156, 156, 156,0.06) 13%, rgba(156, 156, 156,0.06) 22%,transparent 22%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));">
+    <h2>Request Blood</h2>
+    <form id="request-form">
+      <input type="text" id="requester-name" placeholder="Your Name" required><br><br>
+      <input type="email" id="requester-email" placeholder="Your Email" required><br><br>
+      <select id="request-blood-type" required>
+        <option value="" disabled selected>Choose Blood Type</option>
+        <option value="A+">A+</option>
+        <option value="O-">O-</option>
+        <option value="B+">B+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+      </select><br><br>
+      <textarea id="request-message" placeholder="Message (Optional)"></textarea><br><br>
+      <button type="submit" class="btn-submit">Submit Request</button>
+    </form>
+    <div id="request-message-result"></div>
+  </section>
+
+  <section id="inventory" class="form-section" style="background-image: linear-gradient(90deg, rgb(62, 25, 113),rgb(72, 105, 206));">
+    <h2>Blood Inventory</h2>
+    <div id="inventory-list" class="inventory-list">
+      <p>O+: 12 units</p>
+      <p>A+: 8 units</p>
+      <p>B+: 6 units</p>
+      <p>AB+: 3 units</p>
+      <p>O-: 5 units</p>
+    </div>
+  </section>
+
+  <section id="contact" class="form-section" style="background-image: linear-gradient(90deg, rgb(62, 25, 113),rgb(72, 105, 206));">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: support@bloodbank.org</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 123 Health Street, City Hospital, India</p>
+      <form>
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <textarea placeholder="Your Message" required></textarea><br><br>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script1.js"></script>
+</body>
+</html>
