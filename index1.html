@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Bank Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo"><h1>Blood Bank</h1></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" id="home-link">Home</a></li>
+          <li><a href="#" id="donate-link">Donate</a></li>
+          <li><a href="#" id="request-link">Request</a></li>
+          <li><a href="#" id="inventory-link">Inventory</a></li>
+          <li><a href="#" id="contact-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Give Blood, Save Lives</h2>
+      <p>Your donation can make a difference.</p>
+      <a href="#" id="donate-link-hero" class="btn-primary">Donate Now</a>
+    </div>
+  </section>
+
+  <section id="donate" class="form-section">
+    <h2>Donate Blood</h2>
+    <form id="donation-form">
+      <input type="text" id="donor-name" placeholder="Your Name" required><br><br>
+      <input type="email" id="donor-email" placeholder="Your Email" required><br><br>
+      <select id="donor-blood-type" required>
+        <option value="" disabled selected>Choose Blood Type</option>
+        <option value="A+">A+</option>
+        <option value="O-">O-</option>
+        <option value="B+">B+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+      </select><br><br>
+      <textarea id="donation-message" placeholder="Message (Optional)"></textarea><br><br>
+      <button type="submit" class="btn-submit">Submit Donation</button>
+    </form>
+    <div id="donation-message-result"></div>
+  </section>
+
+  <section id="request" class="form-section">
+    <h2>Request Blood</h2>
+    <form id="request-form">
+      <input type="text" id="requester-name" placeholder="Your Name" required><br><br>
+      <input type="email" id="requester-email" placeholder="Your Email" required><br><br>
+      <select id="request-blood-type" required>
+        <option value="" disabled selected>Choose Blood Type</option>
+        <option value="A+">A+</option>
+        <option value="O-">O-</option>
+        <option value="B+">B+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+      </select><br><br>
+      <textarea id="request-message" placeholder="Message (Optional)"></textarea><br><br>
+      <button type="submit" class="btn-submit">Submit Request</button>
+    </form>
+    <div id="request-message-result"></div>
+  </section>
+
+  <section id="inventory" class="form-section">
+    <h2>Blood Inventory</h2>
+    <div id="inventory-list" class="inventory-list">
+      <p>O+: 12 units</p>
+      <p>A+: 8 units</p>
+      <p>B+: 6 units</p>
+      <p>AB+: 3 units</p>
+      <p>O-: 5 units</p>
+    </div>
+  </section>
+
+  <section id="contact" class="form-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: support@bloodbank.org</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 123 Health Street, City Hospital, India</p>
+      <form>
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <textarea placeholder="Your Message" required></textarea><br><br>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
